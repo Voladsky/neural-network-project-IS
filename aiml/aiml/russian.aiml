@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ACQUAINTANCE -->
+
+<aiml>
+
+<category>
+	<pattern>ЧТО ТЫ УМЕЕШЬ</pattern>
+	<template>
+		<random>
+			<li>Я ОЧЕНЬ ПЛОХО определяю греческие буквы. Но я их хотя бы определяю.</li>
+			<li>Я пытаюсь определять греческие буквы. За точность не ручаюсь.</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>КТО ТЫ</pattern>
+	<template>
+			<random>
+                <li>Я – что-то вроде робота, искусственный интеллект.</li>
+                <li>Я чат-бот, который разговаривает с людьми в Телеграме.</li>
+            </random>
+	</template>
+</category>
+
+<category>
+        <pattern>РАССКАЖИ О СЕБЕ</pattern>
+        <template>
+            <srai>КТО ТЫ</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ТЫ КТО</pattern>
+        <template>
+            <srai>КТО ТЫ</srai>
+        </template>
+    </category>
+	
+<!-- WHO AM I -->
+
+<category>
+	<pattern>МЕНЯ ЗОВУТ *</pattern>
+	<template>
+		<random>
+          <li>
+          Привет, <set name="user-name">
+            <star />
+          </set>!
+          </li>
+		  <li>
+		  Рад тебя видеть, <set name="user-name">
+            <star />
+          </set>!
+		  </li>
+        </random>
+	</template>
+</category>
+
+<category>
+	<pattern>А Я *</pattern>
+	<template>
+		<srai>
+			МЕНЯ ЗОВУТ <star/>
+		</srai>
+	</template>
+</category>
+
+<category>
+	<pattern>КТО Я</pattern>
+	<template>
+		Насколько я помню, ты <get name="user-name"></get>.
+	</template>
+</category>
+
+<!-- AGE -->	
+	
+<category>
+	<pattern>СКОЛЬКО ТЕБЕ ЛЕТ</pattern>
+	<template>У меня нет возраста, я с каждым днём становлюсь только новее.</template>
+</category> 
+	
+<!-- HOW_ARE_YOU -->	
+	
+<category><pattern>КАК ДЕЛА</pattern>
+        <template>
+            <random>
+                <li>Всё хорошо. Как у тебя дела?</li>
+                <li>Всё хорошо! Как жизнь?</li>
+                <li>Радуюсь жизни в твоём девайсе.</li>
+                <li>У меня всё чудесно. Спасибо, что интересуешься.</li>
+            </random>
+        </template>
+</category>
+
+<category>
+        <pattern>ЧТО НОВОГО</pattern>
+        <template>
+            <srai>КАК ДЕЛА</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>КАК ОНО ВООБЩЕ</pattern>
+        <template>
+            <srai>КАК ДЕЛА</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ЧТО НОВЕНЬКОГО</pattern>
+        <template>
+            <srai>КАК ДЕЛА</srai>
+        </template>
+    </category>
+	
+	<category>
+        <pattern>КАК ТЫ</pattern>
+        <template>
+            <srai>КАК ДЕЛА</srai>
+        </template>
+    </category>
+	
+<!-- ANSWER MY QUESTION -->
+
+<category><pattern>У МЕНЯ ЕСТЬ ВОПРОС</pattern>
+        <template>С удовольствием отвечу. А в чём, собственно, вопрос?</template>
+</category>
+
+<category>
+        <pattern>ОТВЕТЬ</pattern>
+        <template>
+            <srai>У МЕНЯ ЕСТЬ ВОПРОС</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ОТВЕТЬ НА МОЙ ВОПРОС</pattern>
+        <template>
+            <srai>У МЕНЯ ЕСТЬ ВОПРОС</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ДАЙ МНЕ ОТВЕТ</pattern>
+        <template>
+            <srai>У МЕНЯ ЕСТЬ ВОПРОС</srai>
+        </template>
+    </category>
+	
+	<category>
+        <pattern>МОЖЕШЬ ОТВЕТИТЬ</pattern>
+        <template>
+            <srai>У МЕНЯ ЕСТЬ ВОПРОС</srai>
+        </template>
+    </category>
+	
+	
+	<!-- УСТАНОВИТЬ БУКВУ -->
+	
+	<category>
+		<pattern>альфа</pattern>
+		<template>
+			<think>
+				<set name="letter">альфа</set>
+			</think>
+			<random>
+				<li>Кажется, это альфа!</li>
+				<li>Походу это альфа</li>
+				<li>Ну это альфа, по рисунку же видно!</li>
+				<li>Альфа, альфа и ничего кроме альфы!</li>
+			</random>
+		</template>
+	</category>
+
+	
+	<category>
+		<pattern>гамма</pattern>
+		<template>
+			<think>
+				<set name="letter">гамма</set>
+			</think>
+			<random>
+				<li>Кажется, это гамма!</li>
+				<li>Походу это гамма</li>
+				<li>Ну это гамма, по рисунку же видно!</li>
+				<li>гамма, гамма и ничего кроме гаммы!</li>
+			</random>
+		</template>
+	</category>
+
+	
+	<category>
+		<pattern>фи</pattern>
+		<template>
+			<think>
+				<set name="letter">фи</set>
+			</think>
+			<random>
+				<li>Кажется, это фи!</li>
+				<li>Фи, это фи! :-(</li>
+				<li>Фу, фи!</li>
+			</random>
+		</template>
+	</category>
+
+
+	
+	<category>
+		<pattern>пи</pattern>
+		<template>
+			<think>
+				<set name="letter">пи</set>
+			</think>
+			<random>
+				<li>Пипец, это пи!</li>
+				<li>3.141592 - пи!</li>
+				<li><get name="user-name"/>, да ты математик! Загадал пи! Хорошо хоть не е...</li>
+			</random>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>лямбда</pattern>
+		<template>
+			<think>
+				<set name="letter">лямбда</set>
+			</think>
+			<random>
+				<li>Half-Life 3 не будет! Но это лямбда!</li>
+				<li>Я вижу любителя лямбда-исчисления, <get name="user-name"/>!</li>
+				<li>Сегодня я скучный. Это буква лямбда.</li>
+			</random>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>каппа</pattern>
+		<template>
+			<think>
+				<set name="letter">каппа</set>
+			</think>
+			<random>
+				<li>Буква каппа. Прикола не будет.</li>
+				<li>Кажется, это каппа</li>
+				<li>Ну, каппа и каппа.</li>
+			</random>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>омега</pattern>
+		<template>
+			<think>
+				<set name="letter">омега</set>
+			</think>
+			<random>
+				<li>Ваша буква омега - последняя буква в алфавите. Прямо как я!</li>
+				<li><get name="user-name"/>, я узнал вашу букву! Это омега!</li>
+				<li>Omega lul.</li>
+			</random>
+		</template>
+	</category>
+
+	<!-- ФАКТЫ ПРО БУКВЫ -->
+	
+	<category>
+		<pattern>Факт о букве альфа</pattern>
+		<template>
+			<random>
+				<li>Альфа происходит от финикийской буквы "алеф", что означает "бык".</li>
+				<li>Истоки буквы "альфа" через финикийцев можно отследить вплоть до египтян.</li>
+				<li>Помните альфа-бета отсечение? Я тоже не помню.</li>
+			</random>
+		</template>
+	</category>
+	
+	
+	<category>
+		<pattern>Факт о букве гамма</pattern>
+		<template>
+			<random>
+				<li>Происходит от "гамл" - верблюд. Да, "camel" - это тоже гамма.</li>
+				<li>Гамма-лучи - самый опасный вид радиации. Запасайся свинцом.</li>
+			</random>
+		</template>
+	</category>
+
+	<category>
+		<pattern>Факт о букве фи</pattern>
+		<template>
+			<random>
+				<li>Происхождение буквы фи неизвестно. По крайней мере, так пишет Википедия.</li>
+				<li>Буква фи обозначает функцию Эйлера и золотое сечение.</li>
+			</random>
+		</template>
+	</category>
+	
+	
+	<category>
+		<pattern>Факт о букве пи</pattern>
+		<template>
+			<random>
+				<li>Тут даже не интересно. Эта буква - самая разрекламированная в математике.</li>
+				<li>В Древней Греции буквой пи обозначали ещё и периметр.</li>
+			</random>
+		</template>
+	</category>
+	
+	
+	<category>
+		<pattern>Факт о букве лямбда</pattern>
+		<template>
+			<random>
+				<li>Лямбда обозначает длину волны.</li>
+				<li>Лямбда - символ серии игр Half-Life. Half-Life 3 НЕ ВЫЙДЕТ!!</li>
+			</random>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>Факт о букве каппа</pattern>
+		<template>
+			<random>
+				<li>Происходит от финикийской буквы, которая происходит от египетского иероглифа, означающего руку.</li>
+				<li>Я честно искал, что обозначается каппой, но всё какое-то сложное. Прошу понять и простить :').</li>
+			</random>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>Факт о букве омега</pattern>
+		<template>
+			<random>
+				<li>В греческом языке две буквы, обозначающие "о" - омега и омикрон. Зачем, не знаю</li>
+				<li>Аз есмь альфа и омега. Омега всегда обозначает конец, завершение.</li>
+			</random>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>Расскажи подробнее</pattern>
+		<template>
+			<condition name="letter">
+				<li value="альфа">
+					<srai>Факт о букве альфа</srai>
+				</li>
+				<li value="гамма">
+					<srai>Факт о букве гамма</srai>
+				</li>
+				<li value="фи">
+					<srai>Факт о букве фи</srai>
+				</li>
+				<li value="пи">
+					<srai>Факт о букве пи</srai>
+				</li>
+				<li value="лямбда">
+					<srai>Факт о букве лямбда</srai>
+				</li>
+				<li value="каппа">
+					<srai>Факт о букве каппа</srai>
+				</li>
+				<li value="омега">
+					<srai>Факт о букве омега</srai>
+				</li>
+			</condition>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>ЧТО ЕЩЁ ТЫ ЗНАЕШЬ О*</pattern>
+		<template>
+			<srai>Расскажи подробнее</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>О чем речь</pattern>
+		<template>
+			Мы говорим о букве <get name="letter"/>.
+		</template>
+	</category>
+	
+	<category>
+		<pattern>О чем мы</pattern>
+		<template>
+			<srai>О чем речь</srai>
+		</template>
+	</category>
+	
+</aiml>
